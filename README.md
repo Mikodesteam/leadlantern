@@ -52,9 +52,17 @@ Find local businesses by type and area from OpenStreetMap (no key needed) or the
 - **Operator console**: Setup with a one-time code, owner/manager/viewer roles, keys stored encrypted, audit log of every write, status checks.
 - **Read-only demo mode with labelled sample data**: For a public demo host only.
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**An explainable opportunity score**: [`snippets/score-lead.ts`](snippets/score-lead.ts). A rule table where every rule is a number of points plus one plain sentence, firing only on a fact that was actually checked. The score can always be explained, so the first message built from it never claims something nobody verified.
+Real excerpts from the source, shown for illustration:
+
+- **Explainable opportunity score** ([`snippets/score-lead.ts`](snippets/score-lead.ts)): An explainable opportunity score for a local business. Every rule is a point value plus one plain sentence and fires only on a fact that was really checked, so the result is a 0-100 score with reasons you can quote in a first message.
+- **Guard rules before a cold e-mail goes out** ([`snippets/outreach-guard.ts`](snippets/outreach-guard.ts)): A first message is checked against wording rules (no fake "Re:" subject, no promised results) and a daily limit, and sends run one at a time. Every rule returns a plain-English reason, so a blocked message tells the person exactly what to change.
+- **robots.txt the way RFC 9309 describes it** ([`snippets/robots-txt.ts`](snippets/robots-txt.ts)): The website check reads robots.txt first: the group that names the tool wins over the wildcard group, the longest matching rule decides, a tie goes to Allow, and wildcards in paths are matched without building a regular expression from untrusted text.
 
 ## Requirements (full version)
 
