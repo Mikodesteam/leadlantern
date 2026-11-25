@@ -8,6 +8,8 @@
   <b>Local lead finder for agencies (Node.js).</b>
 </p>
 
+<p align="center"><sub>Local lead finder source code · Google Maps & OpenStreetMap leads · website audit · agency CRM</sub></p>
+
 <p align="center">
   <a href="https://leadlantern-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://store.mikodes.com/p/leadlantern/"><b>Get the full source code</b></a>
@@ -74,6 +76,20 @@ Real excerpts from the source, shown for illustration:
 - Optional, billed to the buyer: Resend account with a verified sending domain
 
 Not included: Hosting, server, domain and TLS certificate; Google Places API usage; Resend plan and sending domain; AI provider usage; Own Overpass/Nominatim server if the shared public OpenStreetMap servers are too slow or busy.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete Leadlantern source code is sold at [store.mikodes.com/p/leadlantern](https://store.mikodes.com/p/leadlantern/).
+
+**What is Leadlantern built with?**  
+Node.js.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://leadlantern-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
